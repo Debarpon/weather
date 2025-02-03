@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcome-screen">
+            <div class="weather-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/4052/4052984.png" alt="Weather Icon">
+            </div>
+            <h1>Weather <span>ForeCasts</span></h1>
+            <button onclick="showMainScreen()">Get Start</button>
+        </div>
+
+        <!-- Main Weather Screen (Initially Hidden) -->
+        <div class="main-screen" id="main-screen">
+            <div class="search-box">
+                <input type="text" id="location-input" placeholder="Enter city name">
+                <button onclick="getWeather()">Search</button>
+            </div>
+            
+            <div class="weather-card" id="weather-card">
+                <h2 class="city-name" id="city-name">Weather Forecast</h2>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <h1 id="temperature">--°C</h1>
+                    </div>
+                    <div class="weather-details">
+                        <p>Condition: <span id="condition">--</span></p>
+                        <p>Humidity: <span id="humidity">--%</span></p>
+                        <p>Wind: <span id="wind">-- km/h</span></p>
+                    </div>
+                </div>
+                <div class="air-quality">
+                    <h3>Air Quality</h3>
+                    <p>PM2.5: <span id="pm2_5">--</span></p>
+                    <p>PM10: <span id="pm10">--</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
