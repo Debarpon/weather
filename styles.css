@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Welcome Screen Styles */
+.welcome-screen {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.weather-icon {
+    margin-bottom: 30px;
+}
+
+.weather-icon img {
+    width: 150px;
+    height: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.welcome-screen h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.welcome-screen span {
+    color: #ffd700;
+}
+
+.welcome-screen button {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.welcome-screen button:hover {
+    background: #ffed4a;
+    transform: scale(1.05);
+}
+
+/* Main Screen Styles (Initially Hidden) */
+.main-screen {
+    display: none;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.search-box button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #ffd700;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: #ffed4a;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.city-name {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.temperature h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.weather-details {
+    width: 100%;
+}
+
+.weather-details p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.air-quality {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.air-quality h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.air-quality p {
+    color: #666;
+    margin: 5px 0;
+}
